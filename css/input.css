@@ -1,0 +1,38 @@
+/*
+! Created On Sat March 15 4:01 PM 2025
+
+! @author: Talha Usman
+! Status: Developer
+*/
+
+@import "tailwindcss";
+
+@layer components {
+  .side-menus {
+    @apply flex items-center justify-center md:justify-start gap-2 md:w-fit px-[13px] py-[5px] hover:bg-[#1a1d20f0] hover:cursor-pointer hover:rounded-full;
+  }
+
+  .whats {
+    @apply m-3 bg-[#16181c] w-1/2 py-5 rounded-xl space-y-3;
+  }
+
+  .h1 {
+    @apply text-xl font-bold px-3;
+  }
+
+  .item {
+    @apply p-3 px-4 hover:bg-[#292c30] hover:cursor-pointer;
+  }
+
+  .trending {
+    @apply text-sm text-gray-200;
+  }
+
+  .hashtag {
+    @apply font-bold;
+  }
+
+  .no-posts {
+    @apply text-sm text-gray-200;
+  }
+}

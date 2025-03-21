@@ -1,0 +1,376 @@
+<!--
+! Created On Sat March 15 4:03 PM 2025
+
+! @author: Talha Usman
+! Status: Developer
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Clone</title>
+    <link
+      rel="shortcut icon"
+      href="https://abs.twimg.com/favicons/twitter-pip.3.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,search,notifications,mail,settings,public,image,gif,ballot"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white">
+    <div class="flex md:container mx-auto">
+      <div class="first w-16 md:w-[70%] flex flex-col items-end">
+        <div class="sidebar flex md:items-end flex-col sticky top-0">
+          <div class="logo invert my-4 w-[160%] px-[50px]">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              class="w-8 m-auto r-4qtqp9 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk"
+            >
+              <g>
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <ul
+            class="flex flex-col text-xl space-y-1 md:px-15 items-end md:items-start w-full"
+          >
+            <li class="side-menus">
+              <span class="material-symbols-outlined text-3xl"> home </span
+              ><span class="hidden md:block">Home</span>
+            </li>
+            <li class="side-menus">
+              <span class="material-symbols-outlined text-3xl"> search </span
+              ><span class="hidden md:block">Explore</span>
+            </li>
+            <li class="side-menus">
+              <span class="material-symbols-outlined text-3xl">
+                notifications </span
+              ><span class="hidden md:block">Notifications</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> message </span
+              ><span class="hidden md:block">Grok</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> lists </span
+              ><span class="hidden md:block">Lists</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> bookmarks </span
+              ><span class="hidden md:block">Bookmarks</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> Group </span
+              ><span class="hidden md:block">Communities</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> box </span
+              ><span class="hidden md:block">Premium</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> person </span
+              ><span class="hidden md:block">Profile</span>
+            </li>
+            <li class="side-menus">
+              <span class="text-3xl material-symbols-outlined"> pending </span
+              ><span class="hidden md:block">More</span>
+            </li>
+            <li>
+              <div class="button w-full text-center my-4">
+                <button
+                  class="bg-blue-600 text-white px-14 py-1.5 text-xl rounded-full hover:bg-blue-400 hidden md:block"
+                >
+                  Post
+                </button>
+                <button
+                  class="bg-blue-600 text-white px-2.5 py-1.5 mx-2 rounded-[100%] w-[40px] h-[40px] hover:bg-blue-400 md:hidden flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined"> edit </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="second w-full border-[1px] border-x-gray-600 border-y-black">
+        <div
+          class="top flex m-2 p-1 sticky top-0 bg-black py-2 backdrop-blur-lg opacity-80"
+        >
+          <div
+            class="absolute w-15 h-1 bg-blue-600 bottom-0 left-[17%] rounded-full z-10"
+          ></div>
+          <div class="left w-1/2 flex justify-center font-bold text-lg">
+            For You
+          </div>
+          <div class="righ w-1/2 flex justify-center font-bold text-lg">
+            Following
+          </div>
+          <div class="settings mx-2">
+            <span class="material-symbols-outlined"> settings </span>
+          </div>
+        </div>
+        <div class="h-[2px] w-full bg-gray-900"></div>
+        <div class="whatishapp flex gap-4 my-3">
+          <div class="img m-5 mx-2">
+            <!-- <img
+              src="https://pbs.twimg.com/profile_images/1522060025854066688/IZs_lylH_bigger.png"
+              alt=""
+            /> -->
+            <img
+              src="/talhapic.jpg"
+              alt=""
+              srcset=""
+              class="w-[80px] h-[60px] rounded-[100%]"
+            />
+          </div>
+
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="What is Happening"
+            class="w-full bg-black text-white h-7 m-9 mx-2 border-0 focus:outline-0 text-xl"
+          />
+        </div>
+        <div class="text-blue-600 flex items-center gap-1 my-4 mx-9">
+          <span class="material-symbols-outlined"> public </span>
+          <span class="font-bold">Everyone Can Reply</span>
+        </div>
+        <div
+          class="w-[80%] h-[0.3px] my-3 mx-auto border-[1px] border-gray-600"
+        ></div>
+        <div class="blueicons text-blue-600 flex gap-2 mx-[10%] my-1">
+          <span class="material-symbols-outlined cursor-pointer"> image </span>
+          <span class="material-symbols-outlined cursor-pointer"> gif </span>
+          <span class="material-symbols-outlined cursor-pointer"> ballot </span>
+          <span class="material-symbols-outlined cursor-pointer">
+            sentiment_satisfied
+          </span>
+          <span class="material-symbols-outlined cursor-pointer">
+            calendar_month
+          </span>
+          <span class="material-symbols-outlined cursor-pointer">
+            pin_drop
+          </span>
+        </div>
+        <hr class="w-full border-[1px] border-gray-600 h-[0.3px]" />
+        <div class="posts">
+          <div class="post">
+            <div class="flex">
+              <div class="image mx-1 my-3">
+                <img
+                  src="/talhapic.jpg"
+                  alt=""
+                  srcset=""
+                  class="w-[45px] h-[25px] rounded-[100%]"
+                />
+              </div>
+              <div class="content my-3">
+                <span
+                  class="font-bold text-white hover:underline cursor-pointer"
+                >
+                  non_aesthetic_things</span
+                >
+                <span class="text-gray-500">@picturesFolder .6h</span>
+                <div>Legend</div>
+                <div class="postimg mx-1">
+                  <img src="/post-1.png" alt="Post Image" srcset="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="icons flex justify-between mx-4 my-4 text-sm text-gray-600"
+            >
+              <div
+                class="icon flex items-center justify-center hover:text-blue-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> chat_bubble </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-green-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> repeat </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-pink-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> Favorite </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-blue-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> bar_chart </span> 1k
+              </div>
+            </div>
+          </div>
+          <hr class="w-full border-[1px] border-gray-600 h-[0.3px]" />
+          <div class="post">
+            <div class="flex">
+              <div class="image mx-1 my-3">
+                <img
+                  src="/talhapic.jpg"
+                  alt=""
+                  srcset=""
+                  class="w-[45px] h-[25px] rounded-[100%]"
+                />
+              </div>
+              <div class="content my-3">
+                <span
+                  class="font-bold text-white hover:underline cursor-pointer"
+                >
+                  non_aesthetic_things</span
+                >
+                <span class="text-gray-500">@picturesFolder .6h</span>
+                <div>Legend</div>
+                <div class="postimg mx-1">
+                  <span>This is a text for me</span>
+                  <!-- <img src="/post-1.png" alt="Post Image" srcset="" /> -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="icons flex justify-between mx-4 my-4 text-sm text-gray-600"
+            >
+              <div
+                class="icon flex items-center justify-center hover:text-blue-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> chat_bubble </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-green-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> repeat </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-pink-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> Favorite </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-blue-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> bar_chart </span> 1k
+              </div>
+            </div>
+          </div>
+          <hr class="w-full border-[1px] border-gray-600 h-[0.3px]" />
+          <div class="post">
+            <div class="flex">
+              <div class="image mx-1 my-3">
+                <img
+                  src="/talhapic.jpg"
+                  alt=""
+                  srcset=""
+                  class="w-[45px] h-[25px] rounded-[100%]"
+                />
+              </div>
+              <div class="content my-3">
+                <span
+                  class="font-bold text-white hover:underline cursor-pointer"
+                >
+                  non_aesthetic_things</span
+                >
+                <span class="text-gray-500">@picturesFolder .6h</span>
+                <div>Legend</div>
+                <div class="postimg mx-1">
+                  <img src="/post-2.png" alt="Post Image" srcset="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="icons flex justify-between mx-4 my-4 text-sm text-gray-600"
+            >
+              <div
+                class="icon flex items-center justify-center hover:text-blue-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> chat_bubble </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-green-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> repeat </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-pink-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> Favorite </span> 1k
+              </div>
+              <div
+                class="icon flex items-center justify-center hover:text-blue-500 hover:bg-gray-900 hover:rounded-full p-1 hover:cursor-pointer"
+              >
+                <span class="material-symbols-outlined"> bar_chart </span> 1k
+              </div>
+            </div>
+          </div>
+          <hr class="w-full border-[1px] border-gray-600 h-[0.3px]" />
+        </div>
+      </div>
+      <div class="third w-full hidden md:block sticky top-0">
+        <div class="search m-3">
+          <input
+            type="search"
+            class="w-1/2 rounded-full bg-[#16181c] text-white px-4 py-2 focus:outline-0"
+            placeholder="Search"
+            autocomplete="off"
+          />
+        </div>
+        <div class="whats sticky top-0 my-4 z-10">
+          <h1 class="h1 text-xl font-bold px-3">Whats Happening</h1>
+          <div class="item justify-between">
+            <div class="trending">Trending in Pakistan</div>
+            <div class="hashtag">#Orry</div>
+            <div class="no-posts">40.2k Posts</div>
+          </div>
+          <div class="item">
+            <div class="trending">Trending in Pakistan</div>
+            <div class="hashtag">#Orry</div>
+            <div class="no-posts">40.2k Posts</div>
+          </div>
+          <div class="item">
+            <div class="trending">Trending in Pakistan</div>
+            <div class="hashtag">#Orry</div>
+            <div class="no-posts">40.2k Posts</div>
+          </div>
+        </div>
+        <div class="whats who sticky top-[50vh] my-5">
+          <h1 class="h1 text-xl font-bold px-3">Who to Follow</h1>
+          <div class="item flex items-center justify-between gap-2 px-3">
+            <div class="p1">
+              <!-- <img
+                class="w-12 h-12"
+                src="https://pbs.twimg.com/profile_images/1522060025854066688/IZs_lylH_bigger.png"
+                alt="vercel"
+              /> -->
+            </div>
+            <div class="p2">
+              <div>Haris Ali Khan</div>
+              <div class="text-gray-500">@CodeWithHarry</div>
+            </div>
+            <div class="p3">
+              <button
+                class="bg-white text-black px-4 py-2 font-bold rounded-full"
+              >
+                Follow
+              </button>
+            </div>
+          </div>
+          <div class="text-blue-600 my-3 px-3 text-sm hover:cursor-pointer">
+            Show More
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
